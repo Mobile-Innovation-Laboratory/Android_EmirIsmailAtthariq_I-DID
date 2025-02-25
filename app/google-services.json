@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "295007246902",
+    "project_id": "i-did-582c8",
+    "storage_bucket": "i-did-582c8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295007246902:android:fd9e310a0e262f480d1697",
+        "android_client_info": {
+          "package_name": "com.motion.i_did"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBJzh-UNEAHIVOtWxG7CMVjDz01jNoV18"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

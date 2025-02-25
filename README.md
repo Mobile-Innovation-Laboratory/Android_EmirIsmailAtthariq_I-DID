@@ -1,5 +1,4 @@
-# I-DID
-## Your Success, Your Story
+# I-DID: Your Success, Your Story
 
 This is my first app for MotionLab Mobile Programming Kotlin internship
 
@@ -20,5 +19,5 @@ for something so when I tried to write what I did for the day on my notebook, I 
 
 -Quotes of the day
 
-### Future plans
+## Future plans
 I'm currently improving this app and are going to fix a few bugs that I've found for now

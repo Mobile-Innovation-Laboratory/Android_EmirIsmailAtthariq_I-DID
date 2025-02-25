@@ -20,4 +20,5 @@ for something so when I tried to write what I did for the day on my notebook, I 
 
 -Quotes of the day
 
+### Future plans
 I'm currently improving this app and are going to fix a few bugs that I've found for now

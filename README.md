@@ -1,6 +1,5 @@
 # I-DID: Your Life, Your Story
-Do you ever did anything you're so proud of that you want to remember it forever? or something that you're ashamed of that you want to make sure you never going to do that again? With this app you can write down all of that and remember it forever
-
+Do you ever did anything you're so proud of that you want to remember it forever? or something that you're ashamed of that you want to make sure you never going to do that again? With this app you can write down all of that and make sure that you will never forget it ever again
 
 This is my first app for MotionLab Mobile Programming Kotlin internship
 

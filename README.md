@@ -9,10 +9,15 @@ for something so when I tried to write what I did for the day on my notebook, I 
 
 ## Current Main Features
 -Adding a new note
+
 -Editing a note
+
 -Deleting a note
+
 -Favoriting a note
+
 -Account Login and Registration
+
 -Quotes of the day
 
 I'm currently improving this app and are going to fix a few bugs that I've found for now

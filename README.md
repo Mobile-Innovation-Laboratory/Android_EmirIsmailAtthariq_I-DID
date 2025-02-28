@@ -81,7 +81,7 @@ I was inspired to make this app because every so often whenever I did anything w
 
 >Favorite screen
 
--If you want to edit an already created note you can press the pencil-shaped button on that note's detail screen and you will be brought to the edit screen for that note
+- If you want to edit an already created note you can press the pencil-shaped button on that note's detail screen and you will be brought to the edit screen for that note
 
 <img src="https://github.com/user-attachments/assets/190311b4-b7eb-4f55-8594-d5c0c1904c4d" width="225" height="500"/>
 

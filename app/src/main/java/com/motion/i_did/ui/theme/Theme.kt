@@ -1,6 +1,5 @@
 package com.motion.i_did.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -9,18 +8,34 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
+
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = LightBlue300,
+    onPrimary = Color.Black,
+    primaryContainer = LightBlue700,
+    onPrimaryContainer = Color.White,
+    secondary = LightBlue200,
+    onSecondary = Color.Black,
+    background = LightBlue900,
+    onBackground = Color.White,
+    surface = LightBlue800,
+    onSurface = Color.White
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
+    primary = LightBlue500,
+    onPrimary = Color.White,
+    primaryContainer = LightBlue200,
+    onPrimaryContainer = Color.Black,
+    secondary = LightBlue700,
+    onSecondary = Color.White,
+    background = LightBlue50,
+    onBackground = Color.Black,
+    surface = LightBlue100,
+    onSurface = Color.Black
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),

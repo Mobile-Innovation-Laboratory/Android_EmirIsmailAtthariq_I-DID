@@ -26,7 +26,6 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -38,6 +37,10 @@ import com.motion.i_did.core.routes.AppRoutes
 import com.motion.i_did.data.local.database.FavoriteDatabase
 import com.motion.i_did.data.local.repository.FavoriteRepository
 import com.motion.i_did.repository.AuthRepository
+import com.motion.i_did.ui.theme.LightBlue300
+import com.motion.i_did.ui.theme.LightBlue50
+import com.motion.i_did.ui.theme.LightBlue500
+import com.motion.i_did.ui.theme.LightBlue600
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -81,9 +84,9 @@ fun LoginScreen(
                     onValueChange = {email = it},
                     label = {Text("Email")},
                     colors = TextFieldDefaults.colors(
-                        focusedLabelColor = Color.Blue,
-                        focusedIndicatorColor = Color.Blue,
-                        unfocusedIndicatorColor = Color.Blue
+                        focusedLabelColor = LightBlue300,
+                        focusedIndicatorColor = LightBlue300,
+                        unfocusedIndicatorColor = LightBlue500
                     ),
                 )
                 Spacer(modifier = Modifier.height(16.dp))
@@ -93,9 +96,9 @@ fun LoginScreen(
                     onValueChange = {password = it},
                     label = {Text("Password")},
                     colors = TextFieldDefaults.colors(
-                        focusedLabelColor = Color.Blue,
-                        focusedIndicatorColor = Color.Blue,
-                        unfocusedIndicatorColor = Color.Blue
+                        focusedLabelColor = LightBlue300,
+                        focusedIndicatorColor = LightBlue300,
+                        unfocusedIndicatorColor = LightBlue500
                     ),
                     //setting for password visibility
                     visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
@@ -147,8 +150,8 @@ fun LoginScreen(
                         }
                     },
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color.Blue,
-                        contentColor = Color.White
+                        containerColor = LightBlue600,
+                        contentColor = LightBlue50
                     ),
 
                 ) {

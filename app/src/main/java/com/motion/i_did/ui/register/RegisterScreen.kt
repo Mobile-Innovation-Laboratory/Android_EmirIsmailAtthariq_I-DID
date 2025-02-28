@@ -8,10 +8,12 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -25,6 +27,10 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.motion.i_did.core.routes.AppRoutes
 import com.motion.i_did.repository.AuthRepository
+import com.motion.i_did.ui.theme.LightBlue300
+import com.motion.i_did.ui.theme.LightBlue50
+import com.motion.i_did.ui.theme.LightBlue500
+import com.motion.i_did.ui.theme.LightBlue600
 import kotlinx.coroutines.launch
 
 
@@ -54,6 +60,11 @@ fun RegisterScreen(
     ) {
         // Text field for the email
         TextField(
+            colors = TextFieldDefaults.colors(
+                focusedLabelColor = LightBlue300,
+                focusedIndicatorColor = LightBlue300,
+                unfocusedIndicatorColor = LightBlue500
+            ),
             value = email,
             onValueChange = { email = it },
             label = { Text("Email") },
@@ -64,6 +75,11 @@ fun RegisterScreen(
 
         // Text field for the password
         TextField(
+            colors = TextFieldDefaults.colors(
+                focusedLabelColor = LightBlue300,
+                focusedIndicatorColor = LightBlue300,
+                unfocusedIndicatorColor = LightBlue500
+            ),
             value = password,
             onValueChange = { password = it },
             label = { Text("Password") },
@@ -75,11 +91,17 @@ fun RegisterScreen(
 
         // Text field for the confirmed password
         TextField(
+            colors = TextFieldDefaults.colors(
+                focusedLabelColor = LightBlue300,
+                focusedIndicatorColor = LightBlue300,
+                unfocusedIndicatorColor = LightBlue500
+            ),
             value = confirmPassword,
             onValueChange = { confirmPassword = it },
             label = { Text("Confirm Password") },
             visualTransformation = PasswordVisualTransformation(),
             modifier = Modifier.fillMaxWidth()
+
         )
 
         // Error Message for the registration screen
@@ -128,7 +150,12 @@ fun RegisterScreen(
                     }
                 }
             },
+            colors = ButtonDefaults.buttonColors(
+                containerColor = LightBlue600,
+                contentColor = LightBlue50
+            ),
             modifier = Modifier.fillMaxWidth()
+
         ) {
             Text("Register")
         }

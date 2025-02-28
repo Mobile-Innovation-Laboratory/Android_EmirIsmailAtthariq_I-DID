@@ -12,10 +12,12 @@ import androidx.compose.material.icons.filled.Send
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -31,6 +33,9 @@ import com.motion.i_did.core.routes.AppRoutes
 import com.motion.i_did.data.Note
 import com.motion.i_did.repository.AuthRepository
 import com.motion.i_did.repository.NotesRepository
+import com.motion.i_did.ui.theme.LightBlue300
+import com.motion.i_did.ui.theme.LightBlue500
+import com.motion.i_did.ui.theme.LightBlue600
 import kotlinx.coroutines.launch
 import java.util.Date
 
@@ -61,7 +66,7 @@ fun NoteScreen(
                         modifier = Modifier
                             .padding(top = 4.dp), text = "What did you do?",
                         style = MaterialTheme.typography.titleLarge,
-                        color = MaterialTheme.colorScheme.primary
+                        color = LightBlue600,
                     )
                 },
                 actions = {
@@ -89,6 +94,11 @@ fun NoteScreen(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 TextField(
+                    colors = TextFieldDefaults.colors(
+                        focusedLabelColor = LightBlue300,
+                        focusedIndicatorColor = LightBlue300,
+                        unfocusedIndicatorColor = LightBlue500
+                    ),
                     //text field for the new note title
                     value = newNotetitle,
                     onValueChange = { newNotetitle = it },
@@ -97,8 +107,14 @@ fun NoteScreen(
                         .padding(16.dp),
                     placeholder = { Text("What happened?") },
                     maxLines = 1
+
                 )
                 TextField(
+                    colors = TextFieldDefaults.colors(
+                        focusedLabelColor = LightBlue300,
+                        focusedIndicatorColor = LightBlue300,
+                        unfocusedIndicatorColor = LightBlue500
+                    ),
                     //text field for the new note content
                     value = newNoteContent,
                     onValueChange = { newNoteContent = it },
@@ -111,6 +127,10 @@ fun NoteScreen(
                 )
                 //button for adding the new note
                 IconButton(
+                    colors = IconButtonDefaults.iconButtonColors(
+                        contentColor = LightBlue300
+
+                    ),
                     modifier = Modifier.weight(1f).size(24.dp),
                     onClick = {
                         if (newNoteContent.isNotBlank()) {

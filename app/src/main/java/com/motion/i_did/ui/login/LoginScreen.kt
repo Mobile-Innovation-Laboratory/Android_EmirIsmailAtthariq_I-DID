@@ -1,6 +1,7 @@
 package com.motion.i_did.ui.login
 
 import android.widget.Toast
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -8,6 +9,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
@@ -26,6 +29,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -41,6 +45,7 @@ import com.motion.i_did.ui.theme.LightBlue300
 import com.motion.i_did.ui.theme.LightBlue50
 import com.motion.i_did.ui.theme.LightBlue500
 import com.motion.i_did.ui.theme.LightBlue600
+import com.motion.i_did.ui.theme.LightBlue900
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -68,6 +73,23 @@ fun LoginScreen(
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         content = {
+            //logo app
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Top
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.idid),
+                    contentDescription = "Logo",
+                    modifier = Modifier
+                        .size(500.dp)
+                        .clip(RoundedCornerShape(16.dp))
+
+                )
+            }
             //Email and password input column
             Column(
                 modifier = Modifier
@@ -162,12 +184,15 @@ fun LoginScreen(
                 Spacer(modifier = Modifier.height(8.dp))
                 //Register button
                 TextButton(
+
                     onClick = {
                         // navigation for going to the register  screen
                         navController.navigate(AppRoutes.Register.route)
                         }
                     ) {
-                    Text("Don't have an account? Register here")
+                    Text("Don't have an account? Register here",
+                        color = LightBlue900
+                    )
                 }
             }
         }

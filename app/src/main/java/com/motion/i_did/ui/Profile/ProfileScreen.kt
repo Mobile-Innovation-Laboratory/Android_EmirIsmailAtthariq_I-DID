@@ -13,6 +13,7 @@ import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -40,6 +41,10 @@ import com.motion.i_did.data.Quote
 import com.motion.i_did.data.RetrofitInstance
 import com.motion.i_did.repository.AuthRepository
 import com.motion.i_did.ui.theme.IDIDTheme
+import com.motion.i_did.ui.theme.LightBlue300
+import com.motion.i_did.ui.theme.LightBlue400
+import com.motion.i_did.ui.theme.LightBlue50
+import com.motion.i_did.ui.theme.LightBlue600
 
 //Profile Screen for the app
 @Composable
@@ -95,12 +100,14 @@ fun ProfileScreen(
                     NavigationBarItem(
                     icon = {
                         Icon(
+                            tint = LightBlue400,
                             imageVector = Icons.Default.AccountCircle,
                             contentDescription = null
                         )
                     },
                     label = {
                         Text(
+
                             "Profile"
                         )
                     },
@@ -145,7 +152,9 @@ fun Profile(navController: NavController, modifier: Modifier = Modifier, authRep
     ) {
         val user = Firebase.auth.currentUser
         if (isLoading) {
-            CircularProgressIndicator()
+            CircularProgressIndicator(
+                color = LightBlue300
+            )
         } else {
             if (quotes.isNotEmpty()) {
                 LazyColumn(
@@ -169,6 +178,10 @@ fun Profile(navController: NavController, modifier: Modifier = Modifier, authRep
         }
         //button for logging out the current user
         Button(
+            colors = ButtonDefaults.buttonColors(
+                containerColor = LightBlue600,
+                contentColor = LightBlue50
+            ),
             onClick = {
                 authRepository.logout()
                 //navigation for going to the login screen
@@ -176,6 +189,7 @@ fun Profile(navController: NavController, modifier: Modifier = Modifier, authRep
                     popUpTo(AppRoutes.Home.route) { inclusive = true }
                 }
             }
+
         ) {
             Text("Logout")
         }

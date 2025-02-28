@@ -31,6 +31,7 @@ import com.motion.i_did.ui.theme.LightBlue300
 import com.motion.i_did.ui.theme.LightBlue50
 import com.motion.i_did.ui.theme.LightBlue500
 import com.motion.i_did.ui.theme.LightBlue600
+import com.motion.i_did.ui.theme.LightBlue900
 import kotlinx.coroutines.launch
 
 
@@ -169,7 +170,8 @@ fun RegisterScreen(
                 navController.navigateUp()
             }
         ) {
-            Text("Already have an account? Login")
+            Text("Already have an account? Login",
+                    color = LightBlue900)
         }
     }
 }

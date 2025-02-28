@@ -1,12 +1,16 @@
 package com.motion.i_did.ui.Home
 
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.AccountCircle
@@ -15,6 +19,7 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -29,13 +34,21 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.motion.i_did.R
 import com.motion.i_did.core.routes.AppRoutes
 import com.motion.i_did.data.Note
 import com.motion.i_did.repository.AuthRepository
 import com.motion.i_did.repository.NotesRepository
 import com.motion.i_did.ui.Components.Note.NoteItem
+import com.motion.i_did.ui.theme.LightBlue300
+import com.motion.i_did.ui.theme.LightBlue400
+import com.motion.i_did.ui.theme.LightBlue50
+import com.motion.i_did.ui.theme.LightBlue600
+import com.motion.i_did.ui.theme.LightBlue800
 
 //Home Screen of the app
 @OptIn(ExperimentalMaterial3Api::class)
@@ -69,24 +82,32 @@ fun HomeScreen(
             topBar = {
                 TopAppBar(
                     title = {
-                        Text(
-                            modifier = Modifier
-                                .padding(top = 4.dp)
-                        ,text ="I did...",
-                        style = MaterialTheme.typography.titleLarge,
-                        color = MaterialTheme.colorScheme.primary)},
-
+                        Box(
+                            modifier = Modifier.fillMaxWidth(),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Image(
+                                painter = painterResource(id = R.drawable.idid),
+                                contentDescription = "Logo",
+                                modifier = Modifier
+                                    .size(250.dp)
+                                    .clip(RoundedCornerShape(8.dp))
+                            )
+                        }
+                    },
 
                 )
-
             },
-            //bottom bar of the home screen
+
+
+                    //bottom bar of the home screen
             bottomBar = {
                 NavigationBar(
                     containerColor = MaterialTheme.colorScheme.surfaceVariant
                 ) { NavigationBarItem(
                     icon = {
                         Icon(
+                            tint = LightBlue400,
                             imageVector = Icons.Default.Home,
                             contentDescription = null
                         )
@@ -125,6 +146,7 @@ fun HomeScreen(
                     NavigationBarItem(
                         icon = {
                             Icon(
+
                                 imageVector = Icons.Default.AccountCircle,
                                 contentDescription = null
                             )
@@ -155,13 +177,19 @@ fun HomeScreen(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(
+                        color = LightBlue600,
                         modifier = Modifier
                             .weight(9f)
                             .padding(16.dp),
                         text = "What did you do?",
                     )
                     IconButton(
+
                         modifier = Modifier.weight(1f).size(24.dp),
+                        colors = IconButtonDefaults.iconButtonColors(
+                            contentColor = LightBlue300
+
+                        ),
                         onClick = {
                             //navigation for going to the input note screen
                             navController.navigate(AppRoutes.NoteScreen.route) {
@@ -169,7 +197,10 @@ fun HomeScreen(
                             }
                         }
                     ) {
-                        Icon(Icons.AutoMirrored.Filled.Send, contentDescription = "Add Note")
+                        Icon(
+
+                            Icons.AutoMirrored.Filled.Send, contentDescription = "Add Note"
+                        )
                     }
 
                 }

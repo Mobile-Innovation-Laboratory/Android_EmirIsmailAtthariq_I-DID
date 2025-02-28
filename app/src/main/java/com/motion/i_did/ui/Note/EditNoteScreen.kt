@@ -11,10 +11,12 @@ import androidx.compose.material.icons.filled.Send
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -31,6 +33,9 @@ import com.motion.i_did.core.routes.AppRoutes
 import com.motion.i_did.data.Note
 import com.motion.i_did.repository.AuthRepository
 import com.motion.i_did.repository.NotesRepository
+import com.motion.i_did.ui.theme.LightBlue300
+import com.motion.i_did.ui.theme.LightBlue500
+import com.motion.i_did.ui.theme.LightBlue600
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import java.util.Date
@@ -86,7 +91,7 @@ fun EditNoteScreen(
                         modifier = Modifier.padding(top = 4.dp),
                         text = "Edit Note",
                         style = MaterialTheme.typography.titleLarge,
-                        color = MaterialTheme.colorScheme.primary
+                        color = LightBlue600
                     )
                 },
                 actions = {
@@ -113,6 +118,11 @@ fun EditNoteScreen(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 TextField(
+                    colors = TextFieldDefaults.colors(
+                        focusedLabelColor = LightBlue300,
+                        focusedIndicatorColor = LightBlue300,
+                        unfocusedIndicatorColor = LightBlue500
+                    ),
                     //text field for changing the note title
                     value = newNoteTitle,
                     onValueChange = { newNoteTitle = it },
@@ -121,6 +131,11 @@ fun EditNoteScreen(
                     maxLines = 1
                 )
                 TextField(
+                    colors = TextFieldDefaults.colors(
+                        focusedLabelColor = LightBlue300,
+                        focusedIndicatorColor = LightBlue300,
+                        unfocusedIndicatorColor = LightBlue500
+                    ),
                     //text field for changing the note content
                     value = newNoteContent,
                     onValueChange = { newNoteContent = it },
@@ -129,6 +144,10 @@ fun EditNoteScreen(
                     maxLines = 30
                 )
                 IconButton(
+                    colors = IconButtonDefaults.iconButtonColors(
+                        contentColor = LightBlue300
+
+                    ),
                     modifier = Modifier.weight(1f).size(24.dp),
                     onClick = {
                         //Updating the note title and note content

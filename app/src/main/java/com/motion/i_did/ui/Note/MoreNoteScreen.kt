@@ -26,6 +26,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -36,6 +37,8 @@ import com.motion.i_did.data.local.entity.FavoriteEntity
 import com.motion.i_did.data.local.repository.FavoriteRepository
 import com.motion.i_did.repository.AuthRepository
 import com.motion.i_did.repository.NotesRepository
+import com.motion.i_did.ui.theme.LightBlue600
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 //Detailed Note screen for the app
@@ -85,7 +88,8 @@ fun MoreNoteScreen(
                             .padding(top = 4.dp)
                         ,text = note?.title ?: "Title not found",
                         style = MaterialTheme.typography.titleLarge,
-                        color = MaterialTheme.colorScheme.primary)},
+                        color = LightBlue600
+                        ) },
 
                 actions = {
                     IconButton(
@@ -136,9 +140,12 @@ fun MoreNoteScreen(
                     Icon(Icons.Default.Delete, contentDescription = "Delete")
                 }
                 //button for favoriting the note
+                var isClicked by remember { mutableStateOf(false) }
                 IconButton(
+
                     modifier = Modifier.padding(start = 24.dp),
                     onClick = {
+
                         note?.let {
                             val favorite = FavoriteEntity(
                                 id = it.id ?: "",
@@ -165,11 +172,23 @@ fun MoreNoteScreen(
                                 }
                             }
                         }
+                        isClicked = !isClicked
 
 
                     }
                 ) {
-                    Icon(Icons.Default.Star, contentDescription = "Favorite")
+                    LaunchedEffect(isClicked) {
+                        if (isClicked) {
+                            delay(1000)
+                            isClicked = false
+                        }
+                    }
+                    Icon(
+                        Icons.Default.Star, contentDescription = "Favorite",
+                        tint = if (isClicked) Color(0xFF039BE5)
+                        else(Color.Black)
+                    )
+
                 }
                 //Button for editing the note
                 IconButton(

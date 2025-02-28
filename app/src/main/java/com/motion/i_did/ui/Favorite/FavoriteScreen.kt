@@ -39,6 +39,8 @@ import com.motion.i_did.repository.AuthRepository
 import com.motion.i_did.repository.NotesRepository
 import com.motion.i_did.ui.Components.Note.NoteItem
 import com.motion.i_did.ui.theme.IDIDTheme
+import com.motion.i_did.ui.theme.LightBlue400
+import com.motion.i_did.ui.theme.LightBlue600
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -87,7 +89,9 @@ fun FavoriteScreen(
                                 .padding(top = 4.dp)
                             ,text ="Favorites",
                             style = MaterialTheme.typography.titleLarge,
-                            color = MaterialTheme.colorScheme.primary)},
+                            color = LightBlue600
+                        )
+                            },
                     actions = {
                         IconButton(
                             onClick = {
@@ -134,6 +138,7 @@ fun FavoriteScreen(
                     NavigationBarItem(
                         icon = {
                             Icon(
+                                tint = LightBlue400,
                                 imageVector = Icons.Default.Star,
                                 contentDescription = null
                             )

@@ -31,36 +31,36 @@ I was inspired to make this app because every so often whenever I did anything w
 
 - After opening the app, you will be brought to the Login screen, if you don't have an account, you can register by clicking the text below the login button
 
-<img src="https://github.com/user-attachments/assets/4f0f9917-e5eb-459d-ad34-cecda642ecb1" width="200" height="500"/>
+<img src="https://github.com/user-attachments/assets/6cad2828-67bf-463c-b5e1-100ded2f07f8" width="225" height="500"/>
 
 >Login Screen
 
 
-<img src = "https://github.com/user-attachments/assets/fedf3548-afcb-4762-8dd1-b6bb10e77475" width = "250" height = "500"/>
+<img src = "https://github.com/user-attachments/assets/da19aad4-2c4f-451c-9a31-94ea7bb8f002" width = "225" height = "500"/>
 
 >Registration Screen
 
 - If you already logged in, you will be brought to the Home Screen of the app
 
-<img src="https://github.com/user-attachments/assets/45e1fe98-e4fa-4c5b-be29-71eb5badf8b1" width="250" height="500"/>
+<img src="https://github.com/user-attachments/assets/0c7c0811-d850-48e1-81d5-b341aa3c5de2" width="225" height="500"/>
 
 >Home Screen
 
 - If you have a new story or you just did something that you want to remember forever, you can click the arrow shaped button and will be brought to another screen for that purpose
 
-<img src="https://github.com/user-attachments/assets/687103da-307a-4961-b33b-0805c94440b2" width="250" height="500"/>
+<img src="https://github.com/user-attachments/assets/97d52a5a-e3f1-45e2-91ec-b00ef4ae4aca" width="225" height="500"/>
 
 >New note Screen
 
 - You can fill up the upper textfield for the title of your story and detail on the lower textfield, after you're finished with it, you can click the bottom arrrow shaped button to add the new note
 
-<img src="https://github.com/user-attachments/assets/cf032bc4-4bcf-4d3c-9370-c49c1b2ed753" width="250" height="500"/>
+<img src="https://github.com/user-attachments/assets/8f5ecdb1-a693-456a-ae8b-4205cdf45618" width="225" height="500"/>
 
 >Home Screen with the new note
 
 - By clickin the note on the home screen, you will be brought to a new screen that will display the detail of that note
 
-<img src="https://github.com/user-attachments/assets/981f3325-6dda-4768-b5af-d9bb838f5561" width="250" height="500"/>
+<img src="https://github.com/user-attachments/assets/44e01332-5fe0-4307-863c-671f58527006" width="225" height="500"/>
 
 
 >Detailed Note Screen
@@ -77,20 +77,20 @@ I was inspired to make this app because every so often whenever I did anything w
 
 - You can un-favorite all favorite notes by pressing the trashcan-shaped button on the top right corner of the favorite screen
 
-<img src="https://github.com/user-attachments/assets/736ed36f-42a7-495b-a5d2-ecba28e07daa" width="250" height="500"/>
+<img src="https://github.com/user-attachments/assets/b768444e-0102-4d08-8ec4-7342f9f30c6b" width="225" height="500"/>
 
 >Favorite screen
 
 -If you want to edit an already created note you can press the pencil-shaped button on that note's detail screen and you will be brought to the edit screen for that note
 
-<img src="https://github.com/user-attachments/assets/1b62171c-56d3-4b06-8653-1c65d4a3d192" width="250" height="500"/>
+<img src="https://github.com/user-attachments/assets/190311b4-b7eb-4f55-8594-d5c0c1904c4d" width="225" height="500"/>
 
 >Edit screen
 
 - Either from Home Screen or Favorite Screen you can access the Profile screen by pressing the right side button on the bottom bar
 - You can see which user are currently logged in and you can logout by pressing the logout button there also there's a motivational quote to help lighten up your day
 
-<img src="https://github.com/user-attachments/assets/225d852b-b1f1-4a46-8898-5161cbd683a6" width="250" height="500"/>
+<img src="https://github.com/user-attachments/assets/ce0c125c-cad9-4cd3-bf08-48aac5f75b9f" width="225" height="500"/>
 
 
 >Profile Screen

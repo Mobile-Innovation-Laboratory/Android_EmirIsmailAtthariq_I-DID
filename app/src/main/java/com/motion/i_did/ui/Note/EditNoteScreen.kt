@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Send
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -172,7 +173,7 @@ fun EditNoteScreen(
                         }
                     }
                 ) {
-                    Icon(Icons.Default.Send, contentDescription = "Update Note")
+                    Icon(Icons.AutoMirrored.Filled.Send, contentDescription = "Update Note")
                 }
             }
             //error message for the edit note screen

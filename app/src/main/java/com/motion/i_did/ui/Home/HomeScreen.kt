@@ -46,9 +46,7 @@ import com.motion.i_did.repository.NotesRepository
 import com.motion.i_did.ui.Components.Note.NoteItem
 import com.motion.i_did.ui.theme.LightBlue300
 import com.motion.i_did.ui.theme.LightBlue400
-import com.motion.i_did.ui.theme.LightBlue50
 import com.motion.i_did.ui.theme.LightBlue600
-import com.motion.i_did.ui.theme.LightBlue800
 
 //Home Screen of the app
 @OptIn(ExperimentalMaterial3Api::class)

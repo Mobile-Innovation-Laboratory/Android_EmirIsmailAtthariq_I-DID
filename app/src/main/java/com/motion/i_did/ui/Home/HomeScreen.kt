@@ -80,6 +80,7 @@ fun HomeScreen(
             topBar = {
                 TopAppBar(
                     title = {
+                        // title bar
                         Box(
                             modifier = Modifier.fillMaxWidth(),
                             contentAlignment = Alignment.Center
